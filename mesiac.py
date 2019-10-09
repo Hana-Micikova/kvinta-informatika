@@ -1,19 +1,18 @@
 import tkinter
 import random
-canvas=tkinter.Canvas(width=1005,height=1000,bg="white")
+canvas=tkinter.Canvas(width=1000,height=1000,bg="white")
 canvas.pack()
 
 def more():
-    canvas.create_rectangle(0,500,1005,1000,fill="blue",outline="blue")
-    
-def mesiac(x,y):
-    canvas.create_oval(x-100,500-y,x,400-y,fill="yellow",outline="yellow")
-    canvas.create_oval(x-50,500-y,x+50,400-y,fill="white",outline="white")
+    canvas.create_rectangle(0,500,1000,1000,fill="blue",outline="blue")
 
-def odraz(x,y):
-    canvas.create_oval(x-100,500+y,x,600+y,fill="yellow",outline="yellow")
-    canvas.create_oval(x-50,500+y,x+50,600+y,fill="blue",outline="blue")
-
+def mesiac(x,y,r,a,b):
+    for i in range(1,3):
+        canvas.create_oval(x-2*r,500+y,x,400+y,fill=a,outline=a)
+        canvas.create_oval(x-r,500+y,x+r,400+y,fill=b,outline=b)
+        y=-1*y
+        b="white"
+        
 def vlajka1():
     canvas.create_oval(0,450,200,650,fill="brown")
     canvas.create_line(100,450,100,250)
@@ -25,10 +24,10 @@ def vlajka2():
     canvas.create_rectangle(800,250,1000,400,fill="red")
 
 
-x=random.randint(100,900)
-y=random.randint(50,950)
+
 vlajka1()
 vlajka2()
 more()
-mesiac(x,y)    
-odraz(x,y)
+mesiac(random.randint(100,900),random.randint(50,450),50,"yellow","blue")    
+
+
