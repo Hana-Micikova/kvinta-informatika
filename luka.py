@@ -16,4 +16,4 @@ def stebla(x,y):
         canvas.create_line(x,y,x+random.randint(-20,20),y-random.randint(0,30),fill="green",width=random.randint(1,4))
 
 for i in range(0,20):
-    stebla(random.randint(0,a),random.randint(0,b)
+    stebla(random.randint(0,a),random.randint(0,b))
