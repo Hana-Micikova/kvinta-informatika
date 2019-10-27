@@ -1,6 +1,8 @@
 import tkinter
 import random
-canvas=tkinter.Canvas(width=1000,height=1000)
+m=1000
+n=1000
+canvas=tkinter.Canvas(width=m,height=n)
 canvas.pack()
 
 def panelacik(x,y,v,s):
@@ -15,6 +17,6 @@ def panelacik(x,y,v,s):
 
 def petrzalka():
     for i in range(1,11):
-        panelacik(random.randint(0,1000),random.randint(0,1000),random.randint(1,31),random.randint(1,16))
+        panelacik(random.randint(0,m),random.randint(0,n),random.randint(1,31),random.randint(1,16))
 
 petrzalka()        
