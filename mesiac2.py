@@ -1,10 +1,11 @@
 import tkinter
 import random
-canvas=tkinter.Canvas(width=1000,height=1000,bg="white")
+m,n=1000,1000
+canvas=tkinter.Canvas(width=m,height=n,bg="white")
 canvas.pack()
 
 def more():
-    canvas.create_rectangle(0,500,1000,1000,fill="blue")
+    canvas.create_rectangle(0,n/2,m,n,fill="blue")
 
 def mesiac(x,y,r,a,b):
     canvas.create_oval(x-2*r,y,x,y-2*r,fill=a,outline=a)
@@ -30,7 +31,7 @@ def mesiacaodraz():
     x=random.randint(100,900)
     y=random.randint(50,400)
     r=50
-    odraz(x,1000-y,r,"yellow","blue")
+    odraz(x,n-y,r,"yellow","blue")
     mesiac(x,y,r,"yellow","white")
 
 def lodicka(x,y,k,a,b):
@@ -40,8 +41,7 @@ def lodicka(x,y,k,a,b):
     logo(x,y+k/3,k/3,a,b)
 
 def flotila():
-    x=500
-    y=500
+    x,y=m/2,n/2
     k=50
     a="light blue"
     b="sienna"
@@ -50,12 +50,10 @@ def flotila():
         x=x-2*k
         y=y+2*k
         k=3/2*k
-        a=a
-        b=b
 
-vlajka(0,450,"green")
+vlajka(0,n/2-50,"green")
 
-vlajka(600,450,"red")
+vlajka(m/10*6,n/2-50,"red")
 
 more()   
 
@@ -65,6 +63,4 @@ mesiac(262,185,40,"red","green")
 
 logo(862,185,40,"light blue","red")
 
-flotila()        
-
-
+flotila()
