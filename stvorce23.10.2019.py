@@ -15,4 +15,4 @@ x=random.randint(0,800)
 y=random.randint(0,600)
 r=random.randint(1,400)
 
-stvorce(random.randint(0+x+r,X_MAS-x-r),random.randint(0+y+r,X_MAS-y-r),r,random.randint(5,15),random.randint(3,10))        
+stvorce(random.randint(0+x+r,X_MAS-x-r),random.randint(0+y+r,X_MAS-y-r),r,random.randint(5,15),random.randint(3,15))        
