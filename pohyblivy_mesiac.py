@@ -30,7 +30,7 @@ def logo(x,y,r,a,b):
 
 def mesiacaodraz(y=n/2):
     x=650
-    #print (y)
+    print (y)
     r=50
     odraz(x,n-y,r,"yellow","blue")
     mesiac(x,y,r,"yellow","white")
@@ -57,11 +57,9 @@ def obraz():
     vlajka(0,n/2-50,"green")
     vlajka(m/10*6,n/2-50,"red")
     more()
-    mesiacaodraz()
     mesiac(262,185,40,"red","green")
     logo(862,185,40,"light blue","red")
     flotila()
-    pohyblivymesiac()
 
 def pohyblivymesiac():
     y=n/2
@@ -73,5 +71,4 @@ def pohyblivymesiac():
         canvas.update()
         canvas.after(10)
         
-
 pohyblivymesiac()
